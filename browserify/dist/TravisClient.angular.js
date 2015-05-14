@@ -1319,6 +1319,7 @@ module.exports = function(arr, fn, initial){
 'use strict';
 angular.module('travisjs',[]);
 
+
 angular.module('travisjs').factory('TravisClient', function(){
     return require('./lib/Client');
 });
@@ -1329,9 +1330,7 @@ angular.module('travisjs').factory('TravisClient', function(){
 var Repos = require('./Repos');
 
 module.exports = function TravisClient ( config ){
-
     this.repos = new Repos(config);
-
 };
 },{"./Repos":6}],6:[function(require,module,exports){
 'use strict';
@@ -1350,6 +1349,10 @@ Repos.prototype.branches = function( repository ){
     return superagent.get('https://api.travis-ci.org/repos/' + repository + '/branches');
 };
 
+
+Repos.prototype.onlyInNode = function(){
+    throw Error('not implemented for this environment. supports only node');
+};
 
 module.exports = Repos;
 

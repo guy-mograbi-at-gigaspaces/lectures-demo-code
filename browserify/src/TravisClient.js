@@ -1,18 +1,14 @@
-var Repos = require('./lib/Repos');
-
-Repos.prototype.onlyInNode = function(){
-
-};
-
+'use strict';
+//var Repos = require('./lib/Repos');
+//
+//Repos.prototype.onlyInNode = function(){
+//
+//};
 
 module.exports = require('./lib/Client');
-
-
-
-
-
-function defineMe( exports ){
-
-    exports.foo = 'bar';
-
-}( exports ? exports : window );
+//
+//function defineMe( exports ){
+//
+//    exports.foo = 'bar';
+//
+//}( exports ? exports : window );

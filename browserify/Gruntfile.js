@@ -12,7 +12,7 @@ module.exports = function (grunt) {
                 options: {
                     jshintrc: 'src/.jshintrc'
                 },
-                src: ['src/**/*.js', 'Gruntfile.js']
+                src: ['src/**/*.js', 'Gruntfile.js', '!src/HelloWorld.all.js']
             }
         },
         mochaTest: {
