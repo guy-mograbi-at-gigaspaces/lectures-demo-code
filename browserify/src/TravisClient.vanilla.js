@@ -1,0 +1,1 @@
+window.TravisClient = require('./lib/Client');

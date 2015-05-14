@@ -1,0 +1,16 @@
+<html ng-app="demo">
+
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+        <script>
+            angular.module('demo', ['travisDemo']);
+
+            angular.controller('DemoCtrl', function( TravisClient ){
+                new TravisClient({}).repos.branches('cloudify-cosmo/cloudify-js').end(function(err, res){
+                    console.log(res.body);
+                });
+            })
+        </script>
+    </body>
+</html>

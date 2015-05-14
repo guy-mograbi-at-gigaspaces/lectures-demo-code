@@ -1,0 +1,12 @@
+<html>
+    <body>
+        Example jquery!
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="TravisClient.jquery.js"></script>
+        <script>
+            new $.TravisClient({}).repos.branches('cloudify-cosmo/cloudify-js').end(function (err, res) {
+                console.log(res.body);
+            });
+        </script>
+    </body>
+</html>

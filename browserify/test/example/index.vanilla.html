@@ -1,0 +1,11 @@
+<html>
+    <body>
+    Hello world!
+    <script src="TravisClient.vanilla.js"></script>
+        <script>
+            new TravisClient({}).repos.branches('cloudify-cosmo/cloudify-js').end(function(err, res){
+                console.log(res.body);
+            });
+        </script>
+    </body>
+</html>

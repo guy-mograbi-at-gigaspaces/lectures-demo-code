@@ -1,0 +1,17 @@
+<html ng-app="demo">
+    <head></head>
+    <body ng-controller="DemoCtrl">
+    Hello {{name}}!
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.js"></script>
+    <script src="TravisClient.angular.js"></script>
+        <script>
+            angular.module('demo', [ 'travisjs' ]);
+            angular.module('demo').controller( 'DemoCtrl',function( $scope, TravisClient ){
+                $scope.name = 'World!';
+                new TravisClient({}).repos.branches('cloudify-cosmo/cloudify-js').end(function(err, res){
+                    console.log(res.body);
+                });
+            });
+        </script>
+    </body>
+</html>
