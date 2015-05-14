@@ -4,7 +4,8 @@ Repos.prototype.onlyInNode = function(){
 
 };
 
-module.exports = require('./libClient');
+
+module.exports = require('./lib/Client');
 
 
 

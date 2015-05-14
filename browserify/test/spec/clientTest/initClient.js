@@ -1,7 +1,8 @@
 'use strict';
 
+if ( TravisClient ) {
+    var g = typeof(window) !== 'undefined' ? window : global;
 
-var g = window || global;
 
-
-g.travisClient = new TravisClient({});
+    g.travisClient = new TravisClient({});
+}
