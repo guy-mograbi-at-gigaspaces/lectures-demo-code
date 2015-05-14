@@ -7,12 +7,12 @@ module.exports = function(config) {
         frameworks: ['browserify', 'jasmine'],
 
         files: [
-            '../3rd-parties/angularjs/angular.js',
+            '../3rd-parties/angular/angular.js',
             '../3rd-parties/angular-mocks/angular-mocks.js',
             //'3rd-parties/angular-sanitize/angular-sanitize.js',
             //'3rd-parties/angular-resource/angular-resource.js',
             '../node_modules/expect.js/index.js',
-            '../dist/angular.js',
+            '../dist/TravisClient.angular.js',
             'spec/angular.js'
 
         ],

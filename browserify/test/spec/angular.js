@@ -3,12 +3,16 @@
 
 describe('travis client', function(){
     beforeEach(window.module('travisjs'));
-    it('should exist', inject(function( CloudifyClient ){
-        window.TravisClient = CloudifyClient;
+    it('should exist', inject(function( TravisClient ){
+
+        window.TravisClient = TravisClient;
+        require('./clientTest/initClient');
     }));
 
-    require('./clientTest');
+    require('./clientTest/repos');
 
 });
+
+
 
 
