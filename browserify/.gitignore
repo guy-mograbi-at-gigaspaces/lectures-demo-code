@@ -1,0 +1,4 @@
+node_modules
+browserify/node_modules
+browserify/3rd-parties
+.idea
